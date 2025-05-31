@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    
+    private let networManager: NetworkService = NetworkService()
+    @State var session: Session?
+    @State var sessions: [Session] = []
+    @State var messages: [Message] = []
+    @State var message: Message?
 
-#Preview {
-    ContentView()
+    var body: some View {
+        Text("Hello \(messages)")
+            .task {
+                do {
+                    sessions = try await networManager.sessions()
+                    messages = try await networManager.messages(sessionId: sessions.first!.id)
+                } catch let error as NetworkError {
+                    print(error)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+    }
 }
