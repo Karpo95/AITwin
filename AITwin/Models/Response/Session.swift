@@ -43,3 +43,10 @@ extension SessionCategory {
         }
     }
 }
+
+extension Session {
+    var formattedDateString: String {
+        let date = Date(iso8601: date)
+        return date?.toISO8601String(options: [.withFullDate]) ?? "Error Date"
+    }
+}

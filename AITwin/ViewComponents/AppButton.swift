@@ -10,8 +10,8 @@ import SwiftUI
 struct AppButton: View {
     //MARK: - Properties
     
-    let action: EmptyClosure
     let text: String
+    let action: EmptyClosure
     
     //MARK: - Body
     
@@ -32,5 +32,5 @@ struct AppButton: View {
 }
 
 #Preview {
-    AppButton(action: {}, text: "Some button")
+    AppButton(text: "Some button", action: {})
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func loading(isLoading: Bool) -> some View {
+    func loading(_ isLoading: Bool) -> some View {
         self
             .overlay {
                 if isLoading {
@@ -29,18 +29,27 @@ extension View {
             self
         }
     }
-}
-
-struct MainBgGradient: View {
-    var body: some View {
-        LinearGradient(
-            gradient: Gradient(colors: [
-                .bgTop,
-                .bgBottom,
-            ]),
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-        .ignoresSafeArea()
+    
+    func navBar<Content: ToolbarContent>(title: String = "", @ToolbarContentBuilder content:  () -> Content) -> some View {
+        self
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                content()
+            }
+            .navigationTitle(title)
+    }
+    
+    //MARK: - Alerts
+    
+    func errorAlert(error: Binding<AppError?>, buttonTitle: String = "OK") -> some View {
+        let localizedAlertError = LocalizedAlertError(error: error.wrappedValue)
+        return alert(isPresented: .constant(localizedAlertError != nil), error: localizedAlertError) { _ in
+            Button(buttonTitle) {
+                error.wrappedValue = nil
+            }
+        } message: { error in
+            Text(error.recoverySuggestion ?? "")
+        }
     }
 }
