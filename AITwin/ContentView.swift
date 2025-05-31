@@ -17,6 +17,7 @@ struct ContentView: View {
 
     var body: some View {
         Text("Hello \(messages)")
+            .font(.appFont(.regular))
             .task {
                 do {
                     sessions = try await networManager.sessions()
@@ -27,5 +28,7 @@ struct ContentView: View {
                     print(error.localizedDescription)
                 }
             }
+            .mainBg()
+//            .loading(isLoading: true)
     }
 }

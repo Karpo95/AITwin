@@ -30,6 +30,15 @@
 		29A8F3072DEB28B7007BBD36 /* MessageHTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3062DEB28B7007BBD36 /* MessageHTTPBody.swift */; };
 		29A8F3092DEB3121007BBD36 /* BodyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3082DEB3121007BBD36 /* BodyEncodable.swift */; };
 		29A8F30B2DEB3151007BBD36 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F30A2DEB3151007BBD36 /* Message.swift */; };
+		29A8F30D2DEB3415007BBD36 /* TextConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F30C2DEB3415007BBD36 /* TextConstant.swift */; };
+		29A8F3132DEB3473007BBD36 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3122DEB3473007BBD36 /* AppFont.swift */; };
+		29A8F3152DEB364C007BBD36 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3142DEB364C007BBD36 /* Font+Extension.swift */; };
+		29A8F3172DEB36B6007BBD36 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3162DEB36B6007BBD36 /* SystemIcon.swift */; };
+		29A8F3192DEB3896007BBD36 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3182DEB3896007BBD36 /* View+Extension.swift */; };
+		29A8F31C2DEB38E5007BBD36 /* AppLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F31B2DEB38E5007BBD36 /* AppLoaderView.swift */; };
+		29A8F31E2DEB3E18007BBD36 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F31D2DEB3E18007BBD36 /* ChatBubble.swift */; };
+		29A8F3202DEB41CD007BBD36 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F31F2DEB41CD007BBD36 /* AppButton.swift */; };
+		29A8F3232DEB4202007BBD36 /* EmptyClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3222DEB4202007BBD36 /* EmptyClosure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +85,15 @@
 		29A8F3062DEB28B7007BBD36 /* MessageHTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHTTPBody.swift; sourceTree = "<group>"; };
 		29A8F3082DEB3121007BBD36 /* BodyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyEncodable.swift; sourceTree = "<group>"; };
 		29A8F30A2DEB3151007BBD36 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		29A8F30C2DEB3415007BBD36 /* TextConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstant.swift; sourceTree = "<group>"; };
+		29A8F3122DEB3473007BBD36 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		29A8F3142DEB364C007BBD36 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		29A8F3162DEB36B6007BBD36 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
+		29A8F3182DEB3896007BBD36 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		29A8F31B2DEB38E5007BBD36 /* AppLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoaderView.swift; sourceTree = "<group>"; };
+		29A8F31D2DEB3E18007BBD36 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		29A8F31F2DEB41CD007BBD36 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		29A8F3222DEB4202007BBD36 /* EmptyClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyClosure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +152,8 @@
 		29A8F2D32DEB1A9C007BBD36 /* AITwin */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F3212DEB41F3007BBD36 /* Global */,
+				29A8F31A2DEB38DC007BBD36 /* ViewComponents */,
 				29A8F2E32DEB1F22007BBD36 /* Extensions */,
 				29A8F2E12DEB1F02007BBD36 /* Services */,
 				29A8F2E42DEB1F33007BBD36 /* Models */,
@@ -166,7 +186,10 @@
 		29A8F2E02DEB1EBB007BBD36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F3102DEB345C007BBD36 /* Fonts */,
+				29A8F3112DEB3462007BBD36 /* Text */,
 				29A8F2D12DEB1A9C007BBD36 /* Assets.xcassets */,
+				29A8F3162DEB36B6007BBD36 /* SystemIcon.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -191,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				29A8F3042DEB2390007BBD36 /* URLRequest+Extension.swift */,
+				29A8F3142DEB364C007BBD36 /* Font+Extension.swift */,
+				29A8F3182DEB3896007BBD36 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +294,40 @@
 				29A8F2FC2DEB2308007BBD36 /* FileStorageService.swift */,
 			);
 			path = FileStorageService;
+			sourceTree = "<group>";
+		};
+		29A8F3102DEB345C007BBD36 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F3122DEB3473007BBD36 /* AppFont.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		29A8F3112DEB3462007BBD36 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F30C2DEB3415007BBD36 /* TextConstant.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		29A8F31A2DEB38DC007BBD36 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F31B2DEB38E5007BBD36 /* AppLoaderView.swift */,
+				29A8F31D2DEB3E18007BBD36 /* ChatBubble.swift */,
+				29A8F31F2DEB41CD007BBD36 /* AppButton.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		29A8F3212DEB41F3007BBD36 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F3222DEB4202007BBD36 /* EmptyClosure.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,23 +468,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A8F2F92DEB22B3007BBD36 /* Session.swift in Sources */,
+				29A8F31E2DEB3E18007BBD36 /* ChatBubble.swift in Sources */,
 				29A8F2ED2DEB2205007BBD36 /* TargetType.swift in Sources */,
 				29A8F3092DEB3121007BBD36 /* BodyEncodable.swift in Sources */,
 				29A8F30B2DEB3151007BBD36 /* Message.swift in Sources */,
 				29A8F2D42DEB1A9C007BBD36 /* AITwinApp.swift in Sources */,
+				29A8F3152DEB364C007BBD36 /* Font+Extension.swift in Sources */,
 				29A8F3072DEB28B7007BBD36 /* MessageHTTPBody.swift in Sources */,
 				29A8F2FF2DEB232B007BBD36 /* MockURLProtocol.swift in Sources */,
+				29A8F3202DEB41CD007BBD36 /* AppButton.swift in Sources */,
 				29A8F2F32DEB2245007BBD36 /* NetworkService.swift in Sources */,
+				29A8F31C2DEB38E5007BBD36 /* AppLoaderView.swift in Sources */,
 				29A8F3012DEB2344007BBD36 /* MockStorage.swift in Sources */,
+				29A8F3232DEB4202007BBD36 /* EmptyClosure.swift in Sources */,
 				29A8F2FD2DEB2308007BBD36 /* FileStorageService.swift in Sources */,
 				29A8F2F12DEB2232007BBD36 /* HTTPMethod.swift in Sources */,
 				29A8F2F62DEB228F007BBD36 /* SessionHTTTPBody.swift in Sources */,
 				29A8F3032DEB2370007BBD36 /* StorageWrapper.swift in Sources */,
 				29A8F3052DEB2390007BBD36 /* URLRequest+Extension.swift in Sources */,
+				29A8F3172DEB36B6007BBD36 /* SystemIcon.swift in Sources */,
+				29A8F30D2DEB3415007BBD36 /* TextConstant.swift in Sources */,
 				29A8F2D52DEB1A9C007BBD36 /* ContentView.swift in Sources */,
+				29A8F3132DEB3473007BBD36 /* AppFont.swift in Sources */,
 				29A8F2EF2DEB221E007BBD36 /* NetworkError.swift in Sources */,
 				29A8F2EB2DEB21D8007BBD36 /* Endpoint.swift in Sources */,
 				29A8F2E92DEB21BD007BBD36 /* BaseNetworkService.swift in Sources */,
+				29A8F3192DEB3896007BBD36 /* View+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
