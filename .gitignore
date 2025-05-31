@@ -1,0 +1,53 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.xcuserdatad
+
+# SwiftPM
+.swiftpm
+.build/
+
+# Carthage
+Carthage/Build
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Archives
+*.xcarchive
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# SPM Packages Cache
+Package.resolved
+
+# Logs
+*.log
+
+# Env files
+.env
+*.secret
+*.key
+
+# Test Coverage
+*.xcresult
+
+# User-specific
+*.orig
+.idea/
+.vscode/
+*.swp
