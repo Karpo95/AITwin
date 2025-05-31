@@ -54,6 +54,12 @@
 		29A8F34B2DEB506D007BBD36 /* SessionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F34A2DEB506D007BBD36 /* SessionItemView.swift */; };
 		29A8F34D2DEB5400007BBD36 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F34C2DEB5400007BBD36 /* Date+Extension.swift */; };
 		29A8F34F2DEB5EB0007BBD36 /* PlaceholderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F34E2DEB5EB0007BBD36 /* PlaceholderText.swift */; };
+		29A8F3512DEB61CF007BBD36 /* CreateSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */; };
+		29A8F3532DEB6321007BBD36 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3522DEB6321007BBD36 /* AppTextField.swift */; };
+		29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */; };
+		29A8F3592DEB6633007BBD36 /* FlexibleWrapGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */; };
+		29A8F35B2DEB6697007BBD36 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35A2DEB6697007BBD36 /* String+Extension.swift */; };
+		29A8F3602DEB6E1D007BBD36 /* FlexibleWrapGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +130,12 @@
 		29A8F34A2DEB506D007BBD36 /* SessionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionItemView.swift; sourceTree = "<group>"; };
 		29A8F34C2DEB5400007BBD36 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		29A8F34E2DEB5EB0007BBD36 /* PlaceholderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderText.swift; sourceTree = "<group>"; };
+		29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewModel.swift; sourceTree = "<group>"; };
+		29A8F3522DEB6321007BBD36 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridFlowLayout.swift; sourceTree = "<group>"; };
+		29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridItemView.swift; sourceTree = "<group>"; };
+		29A8F35A2DEB6697007BBD36 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +194,7 @@
 		29A8F2D32DEB1A9C007BBD36 /* AITwin */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F3612DEB73E2007BBD36 /* Helpers */,
 				29A8F3242DEB4412007BBD36 /* Coordinator */,
 				29A8F3212DEB41F3007BBD36 /* Global */,
 				29A8F31A2DEB38DC007BBD36 /* ViewComponents */,
@@ -250,6 +263,7 @@
 				29A8F3142DEB364C007BBD36 /* Font+Extension.swift */,
 				29A8F3182DEB3896007BBD36 /* View+Extension.swift */,
 				29A8F34C2DEB5400007BBD36 /* Date+Extension.swift */,
+				29A8F35A2DEB6697007BBD36 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,12 +364,14 @@
 		29A8F31A2DEB38DC007BBD36 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F35E2DEB6E12007BBD36 /* FlexibleWrapGridView */,
 				29A8F31B2DEB38E5007BBD36 /* AppLoaderView.swift */,
 				29A8F31D2DEB3E18007BBD36 /* ChatBubble.swift */,
 				29A8F31F2DEB41CD007BBD36 /* AppButton.swift */,
 				29A8F33F2DEB4D26007BBD36 /* MainBgGradient.swift */,
 				29A8F3482DEB4F03007BBD36 /* IconButton.swift */,
 				29A8F34E2DEB5EB0007BBD36 /* PlaceholderText.swift */,
+				29A8F3522DEB6321007BBD36 /* AppTextField.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -400,7 +416,9 @@
 		29A8F3332DEB44C4007BBD36 /* CreateSession */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F3542DEB65DE007BBD36 /* Components */,
 				29A8F3342DEB44E0007BBD36 /* CreateSessionView.swift */,
+				29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */,
 			);
 			path = CreateSession;
 			sourceTree = "<group>";
@@ -437,6 +455,30 @@
 				29A8F3442DEB4D70007BBD36 /* LocalizedAlertError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		29A8F3542DEB65DE007BBD36 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		29A8F35E2DEB6E12007BBD36 /* FlexibleWrapGridView */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */,
+				29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */,
+				29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */,
+			);
+			path = FlexibleWrapGridView;
+			sourceTree = "<group>";
+		};
+		29A8F3612DEB73E2007BBD36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,11 +629,14 @@
 				29A8F33E2DEB4B6F007BBD36 /* SessionsListViewModel.swift in Sources */,
 				29A8F3092DEB3121007BBD36 /* BodyEncodable.swift in Sources */,
 				29A8F32F2DEB4477007BBD36 /* CoordinatorView.swift in Sources */,
+				29A8F3532DEB6321007BBD36 /* AppTextField.swift in Sources */,
 				29A8F30B2DEB3151007BBD36 /* Message.swift in Sources */,
+				29A8F3602DEB6E1D007BBD36 /* FlexibleWrapGridView.swift in Sources */,
 				29A8F34D2DEB5400007BBD36 /* Date+Extension.swift in Sources */,
 				29A8F2D42DEB1A9C007BBD36 /* AITwinApp.swift in Sources */,
 				29A8F34F2DEB5EB0007BBD36 /* PlaceholderText.swift in Sources */,
 				29A8F3452DEB4D70007BBD36 /* LocalizedAlertError.swift in Sources */,
+				29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift in Sources */,
 				29A8F34B2DEB506D007BBD36 /* SessionItemView.swift in Sources */,
 				29A8F3152DEB364C007BBD36 /* Font+Extension.swift in Sources */,
 				29A8F3072DEB28B7007BBD36 /* MessageHTTPBody.swift in Sources */,
@@ -609,10 +654,13 @@
 				29A8F2F12DEB2232007BBD36 /* HTTPMethod.swift in Sources */,
 				29A8F2F62DEB228F007BBD36 /* SessionHTTTPBody.swift in Sources */,
 				29A8F32B2DEB444C007BBD36 /* BaseCoordinatorView.swift in Sources */,
+				29A8F3512DEB61CF007BBD36 /* CreateSessionViewModel.swift in Sources */,
 				29A8F3032DEB2370007BBD36 /* StorageWrapper.swift in Sources */,
 				29A8F3052DEB2390007BBD36 /* URLRequest+Extension.swift in Sources */,
 				29A8F3172DEB36B6007BBD36 /* SystemIcon.swift in Sources */,
+				29A8F35B2DEB6697007BBD36 /* String+Extension.swift in Sources */,
 				29A8F30D2DEB3415007BBD36 /* TextConstant.swift in Sources */,
+				29A8F3592DEB6633007BBD36 /* FlexibleWrapGridItemView.swift in Sources */,
 				29A8F3132DEB3473007BBD36 /* AppFont.swift in Sources */,
 				29A8F2EF2DEB221E007BBD36 /* NetworkError.swift in Sources */,
 				29A8F2EB2DEB21D8007BBD36 /* Endpoint.swift in Sources */,

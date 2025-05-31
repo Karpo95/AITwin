@@ -14,7 +14,7 @@ final class SessionsListViewModel: ObservableObject {
     @Published private(set) var sessions = [Session]()
     @Published private(set) var loading: Bool = false
     @Published var error: AppError?
-    
+
     private let networkService: NetworkServiceProtocol
     
     var showPlaceholder: Bool {
@@ -30,12 +30,12 @@ final class SessionsListViewModel: ObservableObject {
     
     //MARK: - Open func
     
-    func refreshAction() {
-        fetchData()
+    func addSession(_ session: Session) {
+        sessions.append(session)
     }
     
-    func createNewSessionAction() {
-    
+    func refreshAction() {
+        fetchData()
     }
     
     //MARK: - Private

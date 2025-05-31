@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+extension View { 
     func loading(_ isLoading: Bool) -> some View {
         self
             .overlay {

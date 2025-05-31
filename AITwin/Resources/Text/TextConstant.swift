@@ -11,4 +11,7 @@ enum TextConstant {
     static let startNewSession = "Start new session"
     static let sessions = "Sessions"
     static let sessionsPlaceholder = "It looks like you don’t have any active sessions yet. Create a new session to start a conversation."
+    static let sessionTitlePlaceholder = "Enter a title for this session"
+    static let createSession = "Create Session"
+    static let startSession = "Start Session"
 }

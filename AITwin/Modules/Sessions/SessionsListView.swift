@@ -11,7 +11,9 @@ struct SessionsListView: View {
     //MARK: - Properties
     
     @EnvironmentObject private var coordinator: Coordinator
-    @StateObject private var viewModel = SessionsListViewModel()
+    @StateObject var viewModel: SessionsListViewModel = SessionsListViewModel()
+    
+    //MARK: - Init
     
     //MARK: - Body
     var body: some View {
@@ -27,6 +29,9 @@ struct SessionsListView: View {
         .errorAlert(error: $viewModel.error)
         .navBar(title: TextConstant.sessions) {
             SessionsNavBar(action: viewModel.refreshAction)
+        }
+        .onReceive(coordinator.sessionDidAdd) { newSession in
+            viewModel.addSession(newSession)
         }
     }
     
@@ -53,10 +58,4 @@ struct SessionsListView: View {
         }
         .padding(.horizontal)
     }
-}
-
-//MARK: - Preview
-
-#Preview {
-    SessionsListView()
 }

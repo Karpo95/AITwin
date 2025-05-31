@@ -9,7 +9,7 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func sessions() async throws -> [Session]
-    func createSessions(title: String, category: SessionCategory) async throws -> Session
+    func createSession(title: String, category: SessionCategory) async throws -> Session
     func messages(sessionId: String) async throws -> [Message]
     func sendMessage(sessionId: String, text: String, sender: Message.Sender) async throws -> Message
 }
@@ -27,7 +27,7 @@ final class NetworkService: BaseNetworkService<Endpoint>, NetworkServiceProtocol
         try await fetchData(api: .sessions, urlSession: mockSession)
     }
     
-    func createSessions(title: String, category: SessionCategory) async throws -> Session {
+    func createSession(title: String, category: SessionCategory) async throws -> Session {
         let body = SessionHTTTPBody(title: title, category: category)
         return try await fetchData(api: .createSession(body: body), urlSession: mockSession)
     }

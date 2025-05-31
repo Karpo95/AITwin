@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Combine
 
 final class Coordinator: BaseCoordinator<Coordinator.Screen> {
+    //MARK: - Properties
+    
+    let sessionDidAdd = PassthroughSubject<Session, Never>()
     
     //MARK: - Init
     
@@ -19,6 +23,11 @@ final class Coordinator: BaseCoordinator<Coordinator.Screen> {
     
     func createNewSessionAction() {
         push(.createSession)
+    }
+    
+    func addSession(_ session: Session) {
+        sessionDidAdd.send(session)
+        push(.chat(session.id))
     }
 }
 
@@ -46,7 +55,7 @@ extension Coordinator {
             case .createSession:
                 return 1
             case .chat:
-                return 3
+                return 2
             }
         }
     }

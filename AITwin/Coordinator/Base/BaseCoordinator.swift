@@ -37,4 +37,8 @@ class BaseCoordinator<ScreenType: ScreenProtocol>: ObservableObject, AnyObject {
     func back() {
         navigationPath.removeLast()
     }
+    
+    func backToRoot() {
+        navigationPath.removeAll()
+    }
 }
