@@ -87,3 +87,35 @@ extension Array where Element == Session {
         sorted { $0.date > $1.date }
     }
 }
+
+// MARK: - Mock
+
+extension Session {
+    static let mock = Session(
+        id: "s0",
+        date: "2025-06-01T12:00:00Z",
+        title: "Mock Session Title",
+        category: .anxiety
+    )
+    
+    static let mocks: [Session] = [
+        Session(
+            id: "s1",
+            date: "2025-06-01T10:00:00Z",
+            title: "Mock Session One",
+            category: .anxiety
+        ),
+        Session(
+            id: "s2",
+            date: "2024-12-15T14:30:00Z",
+            title: "Mock Session Two",
+            category: .career
+        ),
+        Session(
+            id: "s3",
+            date: "2023-07-20T09:15:00Z",
+            title: "Mock Session Three",
+            category: .conflictResolution
+        )
+    ]
+}

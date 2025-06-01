@@ -25,3 +25,40 @@ extension Message {
         return date?.toLocalDateString(format: .full) ?? timestamp
     }
 }
+
+//MARK: - Mock
+
+extension Message {
+    static let mock = Message(
+        id: "mock-message-1",
+        sessionId: "mock-session-1",
+        text: "This is a mock message.",
+        sender: .user,
+        timestamp: "2025-06-01T10:00:00Z"
+    )
+    
+    static let mocks: [Message] = [
+        Message(
+            id: "mock-message-1",
+            sessionId: "mock-session-1",
+            text: "Hello from mock!",
+            sender: .assistant,
+            timestamp: "2025-06-01T09:00:00Z"
+        ),
+        Message(
+            id: "mock-message-2",
+            sessionId: "mock-session-1",
+            text: "How can I help you today?",
+            sender: .assistant,
+            timestamp: "2025-06-01T09:01:00Z"
+        ),
+        Message(
+            id: "mock-message-3",
+            sessionId: "mock-session-1",
+            text: "User response goes here.",
+            sender: .user,
+            timestamp: "2025-06-01T09:02:00Z"
+        )
+    ]
+}
+
