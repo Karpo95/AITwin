@@ -15,7 +15,7 @@ protocol AIServiceProtocol {
 
 // MARK: - Mock Service
 
-final class MockAIService: AIServiceProtocol {
+final class AIService: AIServiceProtocol {
     private let cannedResponses: [String] = [
         "You're welcome! Always happy to help 🙌",
         "I understand how you feel. Everything will be okay ❤️",

@@ -29,35 +29,43 @@ extension Message {
 //MARK: - Mock
 
 extension Message {
-    static let mock = Message(
-        id: "mock-message-1",
+    static let mockAssistant = Message(
+        id: "m0",
         sessionId: "mock-session-1",
         text: "This is a mock message.",
+        sender: .assistant,
+        timestamp: "2021-06-01T10:00:00Z"
+    )
+    
+    static let mockUser = Message(
+        id: "m0",
+        sessionId: "mock-session-2",
+        text: "This is a mock message.",
         sender: .user,
-        timestamp: "2025-06-01T10:00:00Z"
+        timestamp: "2021-06-01T10:00:00Z"
     )
     
     static let mocks: [Message] = [
         Message(
-            id: "mock-message-1",
+            id: "m1",
             sessionId: "mock-session-1",
             text: "Hello from mock!",
             sender: .assistant,
-            timestamp: "2025-06-01T09:00:00Z"
+            timestamp: "2022-06-01T09:00:00Z"
         ),
         Message(
-            id: "mock-message-2",
+            id: "m2",
             sessionId: "mock-session-1",
             text: "How can I help you today?",
             sender: .assistant,
-            timestamp: "2025-06-01T09:01:00Z"
+            timestamp: "2023-06-01T09:01:00Z"
         ),
         Message(
-            id: "mock-message-3",
+            id: "m3",
             sessionId: "mock-session-1",
             text: "User response goes here.",
             sender: .user,
-            timestamp: "2025-06-01T09:02:00Z"
+            timestamp: "2024-06-01T09:02:00Z"
         )
     ]
 }

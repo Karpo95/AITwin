@@ -38,13 +38,15 @@ final class SessionChatViewModel: ObservableObject {
     init(
     session: Session,
     networkService: NetworkServiceProtocol = NetworkService(),
-    aiService: AIServiceProtocol = MockAIService()
+    aiService: AIServiceProtocol = AIService()
     ) {
         self.session = session
         self.networkService = networkService
         self.aiService = aiService
         fetchData()
     }
+    
+    //MARK: - Open func
     
     func sendAction() {
         sendLoading = true

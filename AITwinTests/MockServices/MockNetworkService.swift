@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import AITwin
 
 final class MockNetworkService: NetworkServiceProtocol {
     enum Behavior {
@@ -23,7 +24,8 @@ final class MockNetworkService: NetworkServiceProtocol {
     var sessionsResult: [Session] = Session.mocks
     var createSessionResult: Session = Session.mock
     var messagesResult: [Message] = Message.mocks
-    var sendMessageResult: Message = Message.mock
+    var sendMessageAssistantResult: Message = Message.mockAssistant
+    var sendMessageUserResult: Message = Message.mockUser
     
     func sessions() async throws -> [Session] {
         switch sessionsBehavior {
@@ -55,7 +57,7 @@ final class MockNetworkService: NetworkServiceProtocol {
     func sendMessage(sessionId: String, text: String, sender: Message.Sender) async throws -> Message {
         switch sendMessageBehavior {
         case .success:
-            return sendMessageResult
+            return sender == .assistant ? sendMessageAssistantResult : sendMessageUserResult
         case .failure(let error):
             throw error
         }
