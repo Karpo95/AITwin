@@ -42,31 +42,3 @@ struct ChatBubble: Shape {
         return path
     }
 }
-
-struct ChatBubbleView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack(spacing: 20) {
-            Text("Привіт! Це повідомлення зліва.")
-                .padding(12)
-                .foregroundColor(.white)
-                .background(
-                    ChatBubble()
-                        .fill(Color.accentColor)
-                )
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 16)
-            
-            Text("А це відповідь справа.")
-                .padding(12)
-                .foregroundColor(.white)
-                .background(
-                    ChatBubble()
-                        .rotation(Angle(degrees: 180))
-                        .fill(Color(.secondary))
-                )
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.horizontal, 16)
-        }
-        .previewLayout(.sizeThatFits)
-    }
-}

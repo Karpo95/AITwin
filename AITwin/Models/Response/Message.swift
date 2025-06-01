@@ -19,10 +19,9 @@ struct Message: Codable, Identifiable, Hashable {
     }
 }
 
-
 extension Message {
     var formattedDate: String {
         let date = Date(iso8601: timestamp)
-        return date?.toISO8601String(options: [.withFullDate]) ?? timestamp
+        return date?.toLocalDateString(format: .full) ?? timestamp
     }
 }

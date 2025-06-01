@@ -33,6 +33,8 @@ struct SessionChatView: View {
                 coordinator.backToRoot()
             }
         }
+        .toolbarBackground(Color.white.opacity(0.8), for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
     }
     
     //MARK: - Subviews

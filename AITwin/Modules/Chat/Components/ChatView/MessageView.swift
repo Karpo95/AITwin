@@ -40,16 +40,12 @@ struct MessageView: View {
         ChatBubble()
             .rotation(Angle(degrees: isFromUser ? 180 : 0))
             .fill(
-                Color(
-                    isFromUser
-                    ? .secondary
-                    : .accent
-                )
+                Color(isFromUser ? .secondary : .accent)
             )
     }
     
     private var messageContent: some View {
-        VStack(alignment: isFromUser ? .trailing : .leading) {
+        VStack(alignment: isFromUser ? .trailing : .leading, spacing: 7) {
             Text(message.text)
                 .font(.appFont(.regular, size: Constants.fontSize))
                 .foregroundStyle(.textMain)
