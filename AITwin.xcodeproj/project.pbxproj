@@ -197,14 +197,11 @@
 		29A8F2D32DEB1A9C007BBD36 /* AITwin */ = {
 			isa = PBXGroup;
 			children = (
-				29A8F3612DEB73E2007BBD36 /* Helpers */,
+				29A8F3B52DECF101007BBD36 /* Utilities */,
+				29A8F3B42DECF0A5007BBD36 /* PresentationLayer */,
 				29A8F3242DEB4412007BBD36 /* Coordinator */,
-				29A8F3212DEB41F3007BBD36 /* Global */,
-				29A8F31A2DEB38DC007BBD36 /* ViewComponents */,
-				29A8F2E32DEB1F22007BBD36 /* Extensions */,
 				29A8F2E12DEB1F02007BBD36 /* Services */,
 				29A8F2E42DEB1F33007BBD36 /* Models */,
-				29A8F2E22DEB1F13007BBD36 /* Modules */,
 				29A8F2E02DEB1EBB007BBD36 /* Resources */,
 				29A8F2CF2DEB1A9C007BBD36 /* Preview Content */,
 				29A8F2E52DEB1F5E007BBD36 /* App */,
@@ -509,6 +506,25 @@
 				29A8F3B22DECE335007BBD36 /* MockAIService.swift */,
 			);
 			path = MockServices;
+			sourceTree = "<group>";
+		};
+		29A8F3B42DECF0A5007BBD36 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F2E22DEB1F13007BBD36 /* Modules */,
+				29A8F31A2DEB38DC007BBD36 /* ViewComponents */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		29A8F3B52DECF101007BBD36 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F3612DEB73E2007BBD36 /* Helpers */,
+				29A8F3212DEB41F3007BBD36 /* Global */,
+				29A8F2E32DEB1F22007BBD36 /* Extensions */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

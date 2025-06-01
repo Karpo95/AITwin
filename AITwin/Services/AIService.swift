@@ -24,7 +24,6 @@ final class AIService: AIServiceProtocol {
         "I'm here if you need advice or just want to chat 😊"
     ]
     
-    private let defaultResponse = "I'm not sure I understood correctly… but I'm here to support you! 🤗"
     private let artificialDelay: UInt64 = 500 * 1_000_000
     
     func sendMessage(_ message: String) async throws -> String {
