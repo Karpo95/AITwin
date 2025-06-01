@@ -24,9 +24,11 @@ class MockURLProtocol: URLProtocol {
             respond(status: 400, data: nil)
             return
         }
-        let pathComponents = url.path.split(separator: "/").map(String.init)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self else { return }
+            let pathComponents = url.path.split(separator: "/").map(String.init)
             let route = parseRoute(method: method, components: pathComponents)
-
+            
             switch route {
             case .listSessions:
                 respond(object: MockStorage.shared.getSessions())
@@ -39,6 +41,7 @@ class MockURLProtocol: URLProtocol {
             case .unknown:
                 respond(status: 400, data: nil)
             }
+        }
     }
     
     private func parseRoute(method: String, components: [String]) -> Route {

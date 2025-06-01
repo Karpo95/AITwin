@@ -15,6 +15,7 @@ final class SessionChatViewModel: ObservableObject {
     @Published var error: AppError?
     @Published var text: String = ""
     @Published var sendLoading = false
+    @Published var loading = false
     
     private let session: Session
     private let networkService: NetworkServiceProtocol
@@ -36,9 +37,9 @@ final class SessionChatViewModel: ObservableObject {
     //MARK: - Init
     
     init(
-    session: Session,
-    networkService: NetworkServiceProtocol = NetworkService(),
-    aiService: AIServiceProtocol = AIService()
+        session: Session,
+        networkService: NetworkServiceProtocol = NetworkService(),
+        aiService: AIServiceProtocol = AIService()
     ) {
         self.session = session
         self.networkService = networkService
@@ -81,6 +82,7 @@ final class SessionChatViewModel: ObservableObject {
     }
     
     private func fetchData() {
+        loading = true
         Task { [weak self] in
             guard let self else { return }
             do {
@@ -88,6 +90,7 @@ final class SessionChatViewModel: ObservableObject {
             } catch let error as NetworkError {
                 self.error = .network(error)
             }
+            loading = false
         }
     }
 }

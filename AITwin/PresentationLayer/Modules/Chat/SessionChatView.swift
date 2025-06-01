@@ -28,6 +28,7 @@ struct SessionChatView: View {
         }
         .mainBg()
         .errorAlert(error: $viewModel.error)
+        .loading(viewModel.loading)
         .navBar(title: viewModel.title) {
             SessionChatNavBar {
                 coordinator.backToRoot()
