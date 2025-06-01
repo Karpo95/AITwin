@@ -44,7 +44,7 @@
 		29A8F32F2DEB4477007BBD36 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F32E2DEB4477007BBD36 /* CoordinatorView.swift */; };
 		29A8F3312DEB4497007BBD36 /* SessionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3302DEB4497007BBD36 /* SessionsListView.swift */; };
 		29A8F3352DEB44E0007BBD36 /* CreateSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3342DEB44E0007BBD36 /* CreateSessionView.swift */; };
-		29A8F3382DEB44FC007BBD36 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3372DEB44FC007BBD36 /* ChatView.swift */; };
+		29A8F3382DEB44FC007BBD36 /* SessionChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3372DEB44FC007BBD36 /* SessionChatView.swift */; };
 		29A8F33E2DEB4B6F007BBD36 /* SessionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F33D2DEB4B6F007BBD36 /* SessionsListViewModel.swift */; };
 		29A8F3402DEB4D26007BBD36 /* MainBgGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F33F2DEB4D26007BBD36 /* MainBgGradient.swift */; };
 		29A8F3432DEB4D47007BBD36 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3422DEB4D47007BBD36 /* AppError.swift */; };
@@ -60,6 +60,14 @@
 		29A8F3592DEB6633007BBD36 /* FlexibleWrapGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */; };
 		29A8F35B2DEB6697007BBD36 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35A2DEB6697007BBD36 /* String+Extension.swift */; };
 		29A8F3602DEB6E1D007BBD36 /* FlexibleWrapGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */; };
+		29A8F3802DEBAD7B007BBD36 /* SessionChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F37F2DEBAD7B007BBD36 /* SessionChatViewModel.swift */; };
+		29A8F3822DEBB20C007BBD36 /* SessionChatNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3812DEBB20C007BBD36 /* SessionChatNavBar.swift */; };
+		29A8F3882DEBB3BD007BBD36 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3862DEBB3BD007BBD36 /* ChatView.swift */; };
+		29A8F38A2DEBB3C6007BBD36 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3892DEBB3C6007BBD36 /* MessageView.swift */; };
+		29A8F38C2DEC5A01007BBD36 /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F38B2DEC5A01007BBD36 /* SendButton.swift */; };
+		29A8F38F2DEC60DA007BBD36 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F38E2DEC60DA007BBD36 /* ValidationError.swift */; };
+		29A8F3912DEC60EE007BBD36 /* NonEmptyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3902DEC60EE007BBD36 /* NonEmptyValidator.swift */; };
+		29A8F3932DEC65B0007BBD36 /* AIMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3922DEC65B0007BBD36 /* AIMockService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +128,7 @@
 		29A8F32E2DEB4477007BBD36 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		29A8F3302DEB4497007BBD36 /* SessionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListView.swift; sourceTree = "<group>"; };
 		29A8F3342DEB44E0007BBD36 /* CreateSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionView.swift; sourceTree = "<group>"; };
-		29A8F3372DEB44FC007BBD36 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		29A8F3372DEB44FC007BBD36 /* SessionChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionChatView.swift; sourceTree = "<group>"; };
 		29A8F33D2DEB4B6F007BBD36 /* SessionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListViewModel.swift; sourceTree = "<group>"; };
 		29A8F33F2DEB4D26007BBD36 /* MainBgGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBgGradient.swift; sourceTree = "<group>"; };
 		29A8F3422DEB4D47007BBD36 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -136,6 +144,14 @@
 		29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridItemView.swift; sourceTree = "<group>"; };
 		29A8F35A2DEB6697007BBD36 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridView.swift; sourceTree = "<group>"; };
+		29A8F37F2DEBAD7B007BBD36 /* SessionChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionChatViewModel.swift; sourceTree = "<group>"; };
+		29A8F3812DEBB20C007BBD36 /* SessionChatNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionChatNavBar.swift; sourceTree = "<group>"; };
+		29A8F3862DEBB3BD007BBD36 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		29A8F3892DEBB3C6007BBD36 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		29A8F38B2DEC5A01007BBD36 /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
+		29A8F38E2DEC60DA007BBD36 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		29A8F3902DEC60EE007BBD36 /* NonEmptyValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmptyValidator.swift; sourceTree = "<group>"; };
+		29A8F3922DEC65B0007BBD36 /* AIMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +258,7 @@
 			children = (
 				29A8F2FB2DEB22F3007BBD36 /* FileStorageService */,
 				29A8F2E62DEB218C007BBD36 /* Networking */,
+				29A8F3922DEC65B0007BBD36 /* AIMockService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -427,7 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				29A8F3392DEB4B4A007BBD36 /* Components */,
-				29A8F3372DEB44FC007BBD36 /* ChatView.swift */,
+				29A8F3372DEB44FC007BBD36 /* SessionChatView.swift */,
+				29A8F37F2DEBAD7B007BBD36 /* SessionChatViewModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -435,6 +453,9 @@
 		29A8F3392DEB4B4A007BBD36 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F3872DEBB3BD007BBD36 /* ChatView */,
+				29A8F3812DEBB20C007BBD36 /* SessionChatNavBar.swift */,
+				29A8F38B2DEC5A01007BBD36 /* SendButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -477,8 +498,27 @@
 		29A8F3612DEB73E2007BBD36 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				29A8F38D2DEC60CB007BBD36 /* Validator */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		29A8F3872DEBB3BD007BBD36 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F3862DEBB3BD007BBD36 /* ChatView.swift */,
+				29A8F3892DEBB3C6007BBD36 /* MessageView.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		29A8F38D2DEC60CB007BBD36 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				29A8F38E2DEC60DA007BBD36 /* ValidationError.swift */,
+				29A8F3902DEC60EE007BBD36 /* NonEmptyValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A8F38C2DEC5A01007BBD36 /* SendButton.swift in Sources */,
 				29A8F3312DEB4497007BBD36 /* SessionsListView.swift in Sources */,
 				29A8F2F92DEB22B3007BBD36 /* Session.swift in Sources */,
 				29A8F3472DEB4EE6007BBD36 /* SessionsNavBar.swift in Sources */,
@@ -626,6 +667,7 @@
 				29A8F3402DEB4D26007BBD36 /* MainBgGradient.swift in Sources */,
 				29A8F3492DEB4F03007BBD36 /* IconButton.swift in Sources */,
 				29A8F2ED2DEB2205007BBD36 /* TargetType.swift in Sources */,
+				29A8F3822DEBB20C007BBD36 /* SessionChatNavBar.swift in Sources */,
 				29A8F33E2DEB4B6F007BBD36 /* SessionsListViewModel.swift in Sources */,
 				29A8F3092DEB3121007BBD36 /* BodyEncodable.swift in Sources */,
 				29A8F32F2DEB4477007BBD36 /* CoordinatorView.swift in Sources */,
@@ -635,13 +677,14 @@
 				29A8F34D2DEB5400007BBD36 /* Date+Extension.swift in Sources */,
 				29A8F2D42DEB1A9C007BBD36 /* AITwinApp.swift in Sources */,
 				29A8F34F2DEB5EB0007BBD36 /* PlaceholderText.swift in Sources */,
+				29A8F3932DEC65B0007BBD36 /* AIMockService.swift in Sources */,
 				29A8F3452DEB4D70007BBD36 /* LocalizedAlertError.swift in Sources */,
 				29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift in Sources */,
 				29A8F34B2DEB506D007BBD36 /* SessionItemView.swift in Sources */,
 				29A8F3152DEB364C007BBD36 /* Font+Extension.swift in Sources */,
 				29A8F3072DEB28B7007BBD36 /* MessageHTTPBody.swift in Sources */,
 				29A8F3352DEB44E0007BBD36 /* CreateSessionView.swift in Sources */,
-				29A8F3382DEB44FC007BBD36 /* ChatView.swift in Sources */,
+				29A8F3382DEB44FC007BBD36 /* SessionChatView.swift in Sources */,
 				29A8F2FF2DEB232B007BBD36 /* MockURLProtocol.swift in Sources */,
 				29A8F3202DEB41CD007BBD36 /* AppButton.swift in Sources */,
 				29A8F2F32DEB2245007BBD36 /* NetworkService.swift in Sources */,
@@ -657,11 +700,16 @@
 				29A8F3512DEB61CF007BBD36 /* CreateSessionViewModel.swift in Sources */,
 				29A8F3032DEB2370007BBD36 /* StorageWrapper.swift in Sources */,
 				29A8F3052DEB2390007BBD36 /* URLRequest+Extension.swift in Sources */,
+				29A8F38F2DEC60DA007BBD36 /* ValidationError.swift in Sources */,
 				29A8F3172DEB36B6007BBD36 /* SystemIcon.swift in Sources */,
 				29A8F35B2DEB6697007BBD36 /* String+Extension.swift in Sources */,
 				29A8F30D2DEB3415007BBD36 /* TextConstant.swift in Sources */,
 				29A8F3592DEB6633007BBD36 /* FlexibleWrapGridItemView.swift in Sources */,
+				29A8F38A2DEBB3C6007BBD36 /* MessageView.swift in Sources */,
+				29A8F3802DEBAD7B007BBD36 /* SessionChatViewModel.swift in Sources */,
 				29A8F3132DEB3473007BBD36 /* AppFont.swift in Sources */,
+				29A8F3912DEC60EE007BBD36 /* NonEmptyValidator.swift in Sources */,
+				29A8F3882DEBB3BD007BBD36 /* ChatView.swift in Sources */,
 				29A8F2EF2DEB221E007BBD36 /* NetworkError.swift in Sources */,
 				29A8F2EB2DEB21D8007BBD36 /* Endpoint.swift in Sources */,
 				29A8F2E92DEB21BD007BBD36 /* BaseNetworkService.swift in Sources */,
@@ -829,13 +877,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AITwin/Preview Content\"";
+				DEVELOPMENT_TEAM = 9KSQ9N8ST8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Twin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -857,13 +908,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AITwin/Preview Content\"";
+				DEVELOPMENT_TEAM = 9KSQ9N8ST8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Twin";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

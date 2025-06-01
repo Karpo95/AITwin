@@ -19,6 +19,7 @@ struct IconButton: View {
         Button(action: action) {
             Image(systemName: icon.rawValue)
                 .padding(5)
+                .fontWeight(.medium)
         }
     }
 }

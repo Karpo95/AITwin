@@ -18,7 +18,7 @@ final class CreateSessionViewModel: ObservableObject {
     @Published private(set) var loading = false
     
     var isCreateEnabled: Bool {
-        selectedCategory != nil && !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        selectedCategory != nil 
     }
     
     private let networkService: NetworkServiceProtocol
@@ -38,9 +38,12 @@ final class CreateSessionViewModel: ObservableObject {
         Task { [weak self] in
             guard let self else { return }
             do {
+                let title = try NonEmptyValidator().validate(title)
                 createdSession = try await networkService.createSession(title: title, category: selectedCategory)
             } catch let error as NetworkError {
                 self.error = .network(error)
+            } catch let error as ValidationError {
+                self.error = .custom(message: error.localizedDescription)
             }
             loading = false
         }

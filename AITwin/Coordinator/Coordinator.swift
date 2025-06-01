@@ -27,7 +27,11 @@ final class Coordinator: BaseCoordinator<Coordinator.Screen> {
     
     func addSession(_ session: Session) {
         sessionDidAdd.send(session)
-        push(.chat(session.id))
+        push(.chat(session))
+    }
+    
+    func didSelectSession(_ session: Session) {
+        push(.chat(session))
     }
 }
 
@@ -35,7 +39,7 @@ extension Coordinator {
     enum Screen: ScreenProtocol {
         case sessionsList
         case createSession
-        case chat(_ sessionId: String)
+        case chat(_ session: Session)
         
         func view() -> AnyView {
             switch self {
@@ -43,8 +47,8 @@ extension Coordinator {
                 return AnyView(SessionsListView())
             case .createSession:
                 return AnyView(CreateSessionView())
-            case .chat(let id):
-                return AnyView(ChatView())
+            case .chat(let session):
+                return AnyView(SessionChatView(session: session))
             }
         }
         

@@ -27,10 +27,6 @@ extension Date {
         self = date
     }
     
-    /// Повертає ISO 8601-рядок з цієї `Date`, використовуючи вказані `options`.
-    ///
-    /// - Parameter options: набір опцій `ISO8601DateFormatter.Options`, що визначають стиль форматування (наприклад, з дробовими секундами, з часовим поясом тощо).
-    /// - Returns: відформатований ISO 8601-рядок.
     func toISO8601String(options: ISO8601DateFormatter.Options) -> String {
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = options

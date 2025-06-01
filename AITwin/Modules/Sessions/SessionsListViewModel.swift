@@ -29,7 +29,7 @@ final class SessionsListViewModel: ObservableObject {
     }
     
     //MARK: - Open func
-    
+        
     func addSession(_ session: Session) {
         sessions.append(session)
     }

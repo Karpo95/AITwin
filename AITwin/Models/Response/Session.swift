@@ -62,11 +62,13 @@ extension SessionCategory {
     }
 }
 
+extension Session: Equatable, Hashable {}
+
 
 extension Session {
     var formattedDateString: String {
         let date = Date(iso8601: date)
-        return date?.toISO8601String(options: [.withFullDate]) ?? "Error Date"
+        return date?.toISO8601String(options: [.withFullDate]) ?? self.date
     }
 }
 

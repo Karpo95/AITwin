@@ -18,8 +18,8 @@ struct SessionsListView: View {
     //MARK: - Body
     var body: some View {
         VStack {
-            placeholder
             ScrollView {
+                placeholder
                 list
             }
             newSessionButton
@@ -51,11 +51,14 @@ struct SessionsListView: View {
     }
     
     private var list: some View {
-        VStack(spacing: 10) {
+        LazyVStack(spacing: 10) {
             ForEach(viewModel.sessions) { session in
                 SessionItemView(session: session)
+                    .onTapGesture {
+                        coordinator.didSelectSession(session)
+                    }
             }
         }
-        .padding(.horizontal)
+        .padding()
     }
 }

@@ -22,6 +22,5 @@ struct AppTextField: View {
             .background(Color(.white))
             .cornerRadius(8)
             .shadow(radius: 3)
-            .padding(.horizontal, 16)
     }
 }

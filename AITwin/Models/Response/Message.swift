@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Message: Codable, Identifiable {
+struct Message: Codable, Identifiable, Hashable {
     let id: String
     let sessionId: String
     let text: String
@@ -16,5 +16,13 @@ struct Message: Codable, Identifiable {
     
     enum Sender: String, Codable {
         case user, assistant
+    }
+}
+
+
+extension Message {
+    var formattedDate: String {
+        let date = Date(iso8601: timestamp)
+        return date?.toISO8601String(options: [.withFullDate]) ?? timestamp
     }
 }
