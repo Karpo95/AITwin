@@ -31,7 +31,7 @@ final class SessionsListViewModel: ObservableObject {
     //MARK: - Open func
         
     func addSession(_ session: Session) {
-        sessions.append(session)
+        sessions.insert(session, at: 0)
     }
     
     func refreshAction() {
@@ -45,7 +45,7 @@ final class SessionsListViewModel: ObservableObject {
         Task { [weak self] in
             guard let self else { return }
             do {
-                sessions = try await networkService.sessions()
+                sessions = try await networkService.sessions().sortedByDate()
             } catch let error as NetworkError {
                 self.error = .network(error)
             }

@@ -68,7 +68,7 @@ extension Session: Equatable, Hashable {}
 extension Session {
     var formattedDateString: String {
         let date = Date(iso8601: date)
-        return date?.toISO8601String(options: [.withFullDate]) ?? self.date
+        return date?.toLocalDateString(format: .full) ?? self.date
     }
 }
 
@@ -79,5 +79,11 @@ extension SessionCategory: FlexibleWrapGridItemProtocol {
     
     var gridItemText: String {
         displayName
+    }
+}
+
+extension Array where Element == Session {
+    func sortedByDate() -> [Session] {
+        sorted { $0.date > $1.date }
     }
 }
