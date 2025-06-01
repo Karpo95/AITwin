@@ -23,6 +23,7 @@ struct CreateSessionView: View {
                 text: TextConstant.startSession,
                 action: viewModel.startSession
             )
+            .padding()
             .disabled(!viewModel.isCreateEnabled)
             .opacity(!viewModel.isCreateEnabled ? 0.5 : 1)
         }
@@ -39,6 +40,7 @@ struct CreateSessionView: View {
     
     private var titleTextField: some View {
         AppTextField(text: $viewModel.title, placeholder: TextConstant.sessionTitlePlaceholder)
+            .padding()
     }
     
     private var categories: some View {

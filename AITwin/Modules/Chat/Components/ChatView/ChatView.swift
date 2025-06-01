@@ -24,6 +24,7 @@ struct ChatView: View {
                     }
                     .animation(.easeInOut(duration: 0.3), value: messages)
                 }
+                .padding(.vertical)
             }
             .onAppear {
                 scrollToLast(proxy, messages: messages)

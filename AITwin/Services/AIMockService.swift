@@ -47,6 +47,6 @@ final class MockAIService: AIServiceProtocol {
             return cannedResponses[3]
         }
         
-        return cannedResponses[4]
+        return cannedResponses.randomElement() ?? cannedResponses[0]
     }
 }
