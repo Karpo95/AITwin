@@ -66,8 +66,9 @@
 		29A8F3912DEC60EE007BBD36 /* NonEmptyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3902DEC60EE007BBD36 /* NonEmptyValidator.swift */; };
 		29A8F3932DEC65B0007BBD36 /* AIMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3922DEC65B0007BBD36 /* AIMockService.swift */; };
 		29A8F3A52DECAE2C007BBD36 /* AITwinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3A32DECAE2C007BBD36 /* AITwinTests.swift */; };
-		29A8F3A72DECAF2F007BBD36 /* SessionsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTest.swift */; };
+		29A8F3A72DECAF2F007BBD36 /* SessionsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTests.swift */; };
 		29A8F3A92DECB2FF007BBD36 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3A82DECB2FF007BBD36 /* MockNetworkService.swift */; };
+		29A8F3AB2DECD01F007BBD36 /* CreateSessionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3AA2DECD01F007BBD36 /* CreateSessionViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,8 +143,9 @@
 		29A8F3922DEC65B0007BBD36 /* AIMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMockService.swift; sourceTree = "<group>"; };
 		29A8F39A2DECAE26007BBD36 /* AITwinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AITwinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A8F3A32DECAE2C007BBD36 /* AITwinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITwinTests.swift; sourceTree = "<group>"; };
-		29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListViewModelTest.swift; sourceTree = "<group>"; };
+		29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListViewModelTests.swift; sourceTree = "<group>"; };
 		29A8F3A82DECB2FF007BBD36 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		29A8F3AA2DECD01F007BBD36 /* CreateSessionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,7 +494,8 @@
 			isa = PBXGroup;
 			children = (
 				29A8F3A32DECAE2C007BBD36 /* AITwinTests.swift */,
-				29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTest.swift */,
+				29A8F3A62DECAF2F007BBD36 /* SessionsListViewModelTests.swift */,
+				29A8F3AA2DECD01F007BBD36 /* CreateSessionViewModelTests.swift */,
 			);
 			path = AITwinTests;
 			sourceTree = "<group>";
@@ -667,7 +670,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A8F3A52DECAE2C007BBD36 /* AITwinTests.swift in Sources */,
-				29A8F3A72DECAF2F007BBD36 /* SessionsListViewModelTest.swift in Sources */,
+				29A8F3AB2DECD01F007BBD36 /* CreateSessionViewModelTests.swift in Sources */,
+				29A8F3A72DECAF2F007BBD36 /* SessionsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

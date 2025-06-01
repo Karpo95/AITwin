@@ -1,5 +1,5 @@
 //
-//  SessionsListViewModelTest.swift
+//  SessionsListViewModelTests.swift
 //  AITwinTests
 //
 //  Created by Karpenko Bohdan on 01.06.2025.
@@ -11,7 +11,7 @@ import Combine
 @testable import AITwin
 
 @MainActor
-final class SessionsListViewModelTest: XCTestCase {
+final class SessionsListViewModelTests: XCTestCase {
     private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Helpers
@@ -244,7 +244,7 @@ final class SessionsListViewModelTest: XCTestCase {
 
 // MARK: - Mock Data for Tests
 
-private extension SessionsListViewModelTest {
+private extension SessionsListViewModelTests {
     /// Array of mock sessions intentionally unsorted for testing sort logic
     var mockSessionsUnsorted: [Session] {
         [
