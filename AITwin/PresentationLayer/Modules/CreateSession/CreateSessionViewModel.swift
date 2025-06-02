@@ -15,9 +15,9 @@ final class CreateSessionViewModel: ObservableObject {
     @Published var selectedCategory: SessionCategory? = nil
     @Published var error: AppError?
     @Published private(set) var createdSession: Session?
-    @Published private(set) var loading = false
+    @Published private(set) var isLoading = false
     
-    var isCreateEnabled: Bool {
+    var canCreateSession: Bool {
         selectedCategory != nil 
     }
     
@@ -33,7 +33,7 @@ final class CreateSessionViewModel: ObservableObject {
     
     func startSession() {
         guard let selectedCategory = selectedCategory else { return }
-        loading = true
+        isLoading = true
         
         Task { [weak self] in
             guard let self else { return }
@@ -45,7 +45,7 @@ final class CreateSessionViewModel: ObservableObject {
             } catch let error as ValidationError {
                 self.error = .custom(message: error.localizedDescription)
             }
-            loading = false
+            isLoading = false
         }
     }
 }

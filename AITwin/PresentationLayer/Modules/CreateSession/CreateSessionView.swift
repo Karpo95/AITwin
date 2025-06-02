@@ -24,12 +24,12 @@ struct CreateSessionView: View {
                 action: viewModel.startSession
             )
             .padding()
-            .disabled(!viewModel.isCreateEnabled)
-            .opacity(!viewModel.isCreateEnabled ? 0.5 : 1)
+            .disabled(!viewModel.canCreateSession)
+            .opacity(!viewModel.canCreateSession ? 0.5 : 1)
         }
         .navigationTitle(TextConstant.createSession)
         .mainBg()
-        .loading(viewModel.loading)
+        .loading(viewModel.isLoading)
         .errorAlert(error: $viewModel.error)
         .onReceive(viewModel.$createdSession.compactMap { $0 }) { newSession in
             coordinator.addSession(newSession)

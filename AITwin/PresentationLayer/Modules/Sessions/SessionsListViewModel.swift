@@ -12,7 +12,7 @@ final class SessionsListViewModel: ObservableObject {
     //MARK: - Properties
     
     @Published private(set) var sessions = [Session]()
-    @Published private(set) var loading: Bool = false
+    @Published private(set) var isLoading: Bool = false
     @Published var error: AppError?
 
     private let networkService: NetworkServiceProtocol
@@ -23,8 +23,8 @@ final class SessionsListViewModel: ObservableObject {
     
     //MARK: - Init
     
-    init(networService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networService
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
         fetchData()
     }
     
@@ -41,7 +41,7 @@ final class SessionsListViewModel: ObservableObject {
     //MARK: - Private
     
     private func fetchData() {
-        loading = true
+        isLoading = true
         Task { [weak self] in
             guard let self else { return }
             do {
@@ -49,7 +49,7 @@ final class SessionsListViewModel: ObservableObject {
             } catch let error as NetworkError {
                 self.error = .network(error)
             }
-            loading = false
+            isLoading = false
         }
     }
 }

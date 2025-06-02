@@ -16,11 +16,11 @@ struct SessionItemView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            title
+            titleView
             HStack {
-                category
+                categoryView
                 Spacer()
-                date
+                dateView
             }
         }
         .padding(10)
@@ -33,14 +33,14 @@ struct SessionItemView: View {
     
     //MARK: - Subviews
     
-    private var title: some View {
+    private var titleView: some View {
         Text(session.title)
             .font(.appFont(.semiBold, size: 15))
             .foregroundStyle(.textMain)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    private var category: some View {
+    private var categoryView: some View {
         Text(session.category.displayName)
             .font(.appFont(.regular, size: 12))
             .foregroundStyle(.white)
@@ -52,7 +52,7 @@ struct SessionItemView: View {
             }
     }
     
-    private var date: some View {
+    private var dateView: some View {
         Text(session.formattedDateString)
             .font(.appFont(.regular, size: 12))
             .foregroundStyle(.textMain)

@@ -28,7 +28,7 @@ final class NetworkService: BaseNetworkService<Endpoint>, NetworkServiceProtocol
     }
     
     func createSession(title: String, category: SessionCategory) async throws -> Session {
-        let body = SessionHTTTPBody(title: title, category: category)
+        let body = SessionHTTPBody(title: title, category: category)
         return try await fetchData(api: .createSession(body: body), urlSession: mockSession)
     }
     

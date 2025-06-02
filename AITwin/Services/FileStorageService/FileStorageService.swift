@@ -12,7 +12,7 @@ final class FileStorageService {
 
     init?(filename: String = "mock_data.json") {
         guard let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("[FileStorageService] Failed to locate document directory.")
+            debugPrint("[FileStorageService] Failed to locate document directory.")
             return nil
         }
         self.fileURL = docs.appendingPathComponent(filename)
@@ -23,7 +23,7 @@ final class FileStorageService {
             let data = try Data(contentsOf: fileURL)
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            print("[FileStorageService] Failed to load or decode: \(error)")
+            debugPrint("[FileStorageService] Failed to load or decode: \(error)")
             return nil
         }
     }
@@ -34,7 +34,7 @@ final class FileStorageService {
             try data.write(to: fileURL, options: .atomic)
             return true
         } catch {
-            print("[FileStorageService] Failed to save: \(error)")
+            debugPrint("[FileStorageService] Failed to save: \(error)")
             return false
         }
     }

@@ -35,6 +35,8 @@ final class Coordinator: BaseCoordinator<Coordinator.Screen> {
     }
 }
 
+//MARK: - Screen
+
 extension Coordinator {
     enum Screen: ScreenProtocol {
         case sessionsList

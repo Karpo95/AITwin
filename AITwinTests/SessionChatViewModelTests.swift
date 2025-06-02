@@ -168,17 +168,17 @@ final class SessionChatViewModelTests: XCTestCase {
         waitForFetch(vm)
 
         // Then (initially empty)
-        XCTAssertFalse(vm.sendButtonIsActive, "sendButtonIsActive should be false when text is empty")
+        XCTAssertFalse(vm.isSendButtonActive, "sendButtonIsActive should be false when text is empty")
 
         // When
         vm.text = "Hello"
         // Then
-        XCTAssertTrue(vm.sendButtonIsActive, "sendButtonIsActive should be true when text is non‐empty")
+        XCTAssertTrue(vm.isSendButtonActive, "sendButtonIsActive should be true when text is non‐empty")
 
         // When
         vm.text = "   "
         // Then
-        XCTAssertFalse(vm.sendButtonIsActive, "sendButtonIsActive should be false when text is only whitespace")
+        XCTAssertFalse(vm.isSendButtonActive, "sendButtonIsActive should be false when text is only whitespace")
     }
 
     // MARK: - sendAction

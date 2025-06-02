@@ -14,8 +14,8 @@ final class SessionChatViewModel: ObservableObject {
     
     @Published var error: AppError?
     @Published var text: String = ""
-    @Published var sendLoading = false
-    @Published var loading = false
+    @Published var isSending = false
+    @Published var isLoading = false
     
     private let session: Session
     private let networkService: NetworkServiceProtocol
@@ -29,7 +29,7 @@ final class SessionChatViewModel: ObservableObject {
         messages.count == 0
     }
     
-    var sendButtonIsActive: Bool {
+    var isSendButtonActive: Bool {
         let text = try? NonEmptyValidator().validate(text)
         return text != nil
     }
@@ -50,18 +50,18 @@ final class SessionChatViewModel: ObservableObject {
     //MARK: - Open func
     
     func sendAction() {
-        sendLoading = true
+        isSending = true
         Task { [weak self] in
             guard let self else { return }
             do {
                 let userMessage = try await sendUserMessage()
-                try await sendAIMessgae(userMessage: userMessage)
+                try await sendAIMessage(userMessage: userMessage)
             } catch let error as NetworkError {
                 self.error = .network(error)
             } catch let error as ValidationError {
                 self.error = .custom(message: error.localizedDescription)
             }
-            sendLoading = false
+            isSending = false
         }
     }
     
@@ -75,14 +75,14 @@ final class SessionChatViewModel: ObservableObject {
         return message
     }
     
-    private func sendAIMessgae(userMessage: Message) async throws {
+    private func sendAIMessage(userMessage: Message) async throws {
         let aiMessageText = try await aiService.sendMessage(text)
         let aiMessage = try await networkService.sendMessage(sessionId: session.id, text: aiMessageText, sender: .assistant)
         messages.append(aiMessage)
     }
     
     private func fetchData() {
-        loading = true
+        isLoading = true
         Task { [weak self] in
             guard let self else { return }
             do {
@@ -90,7 +90,7 @@ final class SessionChatViewModel: ObservableObject {
             } catch let error as NetworkError {
                 self.error = .network(error)
             }
-            loading = false
+            isLoading = false
         }
     }
 }

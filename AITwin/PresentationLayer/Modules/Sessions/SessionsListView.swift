@@ -19,13 +19,13 @@ struct SessionsListView: View {
     var body: some View {
         VStack {
             ScrollView {
-                placeholder
-                list
+                placeholderView
+                listView
             }
             newSessionButton
         }
         .mainBg()
-        .loading(viewModel.loading)
+        .loading(viewModel.isLoading)
         .errorAlert(error: $viewModel.error)
         .navBar(title: TextConstant.sessions) {
             SessionsNavBar(action: viewModel.refreshAction)
@@ -43,14 +43,14 @@ struct SessionsListView: View {
         }
     }
     
-    @ViewBuilder private var placeholder: some View {
+    @ViewBuilder private var placeholderView: some View {
         if viewModel.showPlaceholder {
             PlaceholderText(text: TextConstant.sessionsPlaceholder)
                 .padding()
         }
     }
     
-    private var list: some View {
+    private var listView: some View {
         LazyVStack(spacing: 10) {
             ForEach(viewModel.sessions) { session in
                 SessionItemView(session: session)

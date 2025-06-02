@@ -28,7 +28,7 @@ struct SessionChatView: View {
         }
         .mainBg()
         .errorAlert(error: $viewModel.error)
-        .loading(viewModel.loading)
+        .loading(viewModel.isLoading)
         .navBar(title: viewModel.title) {
             SessionChatNavBar {
                 coordinator.backToRoot()
@@ -42,8 +42,15 @@ struct SessionChatView: View {
     
     private var inputView: some View {
         HStack {
-            AppTextField(text: $viewModel.text, placeholder: TextConstant.messagePlaceholder)
-            SendButton(action: viewModel.sendAction, isLoading: viewModel.sendLoading, isActive: viewModel.sendButtonIsActive)
+            AppTextField(
+                text: $viewModel.text,
+                placeholder: TextConstant.messagePlaceholder
+            )
+            SendButton(
+                action: viewModel.sendAction,
+                isLoading: viewModel.isSending,
+                isActive: viewModel.isSendButtonActive
+            )
         }
         .padding(.horizontal)
         .padding(.bottom)

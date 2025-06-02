@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SessionHTTTPBody: BodyEncodable {
+struct SessionHTTPBody: BodyEncodable {
     let title: String
     let category: SessionCategory
 }

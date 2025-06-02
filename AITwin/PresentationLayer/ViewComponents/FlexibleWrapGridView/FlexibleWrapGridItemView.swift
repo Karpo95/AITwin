@@ -31,4 +31,3 @@ struct FlexibleWrapGridItemView<Item: FlexibleWrapGridItemProtocol>: View {
             .animation(.default, value: isSelected)
     }
 }
-

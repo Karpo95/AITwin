@@ -9,7 +9,7 @@ import Foundation
 
 enum Endpoint {
     case sessions
-    case createSession(body: SessionHTTTPBody)
+    case createSession(body: SessionHTTPBody)
     case messages(sessionId: String)
     case sendMessage(sessionId: String, body: MessageHTTPBody)
 }

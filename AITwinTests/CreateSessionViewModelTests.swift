@@ -21,7 +21,7 @@ final class CreateSessionViewModelTests: XCTestCase {
     ) {
         let expectation = XCTestExpectation(description: "Wait until loading becomes false")
 
-        viewModel.$loading
+        viewModel.$isLoading
             .dropFirst() // skip initial
             .sink { loading in
                 if loading == false {
@@ -52,7 +52,7 @@ final class CreateSessionViewModelTests: XCTestCase {
 
         // Then
         XCTAssertEqual(viewModel.createdSession?.id, expectedSession.id)
-        XCTAssertFalse(viewModel.loading)
+        XCTAssertFalse(viewModel.isLoading)
         XCTAssertNil(viewModel.error)
     }
 
@@ -69,7 +69,7 @@ final class CreateSessionViewModelTests: XCTestCase {
 
         // Then
         XCTAssertNil(viewModel.createdSession)
-        XCTAssertFalse(viewModel.loading)
+        XCTAssertFalse(viewModel.isLoading)
         XCTAssertNotNil(viewModel.error)
         if case let .custom(message)? = viewModel.error {
             XCTAssertFalse(message.isEmpty, "Validation error should have a message")
@@ -93,7 +93,7 @@ final class CreateSessionViewModelTests: XCTestCase {
 
         // Then
         XCTAssertNil(viewModel.createdSession)
-        XCTAssertFalse(viewModel.loading)
+        XCTAssertFalse(viewModel.isLoading)
         XCTAssertNotNil(viewModel.error)
     }
 
@@ -103,11 +103,11 @@ final class CreateSessionViewModelTests: XCTestCase {
         let viewModel = CreateSessionViewModel(networkService: mock)
 
         // Then
-        XCTAssertFalse(viewModel.isCreateEnabled, "Should be false when category is nil")
+        XCTAssertFalse(viewModel.canCreateSession, "Should be false when category is nil")
 
         // When
         viewModel.selectedCategory = .career
-        XCTAssertTrue(viewModel.isCreateEnabled, "Should be true when category is set")
+        XCTAssertTrue(viewModel.canCreateSession, "Should be true when category is set")
     }
 
     func test_startSession_failsWithoutCategory() {
@@ -122,7 +122,7 @@ final class CreateSessionViewModelTests: XCTestCase {
 
         // Then
         XCTAssertNil(viewModel.createdSession)
-        XCTAssertFalse(viewModel.loading)
-        XCTAssertFalse(viewModel.isCreateEnabled)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertFalse(viewModel.canCreateSession)
     }
 }

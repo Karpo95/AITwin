@@ -31,6 +31,8 @@ struct AppButton: View {
     }
 }
 
+//MARK: - Preview
+
 #Preview {
     AppButton(text: "Some button", action: {})
 }

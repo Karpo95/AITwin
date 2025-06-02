@@ -19,7 +19,7 @@ struct FlexibleWrapGridView<Item: FlexibleWrapGridItemProtocol>: View {
     //MARK: - Body
     var body: some View {
         ScrollView {
-            FlexibleWrapGridFlowLayout(items: items, selectedItem: $selectedItem)
+            FlexibleWrapGridFlowLayoutView(items: items, selectedItem: $selectedItem)
                 .padding(15)
         }
     }

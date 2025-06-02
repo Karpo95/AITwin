@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlexibleWrapGridFlowLayout<Item: FlexibleWrapGridItemProtocol>: View {
+struct FlexibleWrapGridFlowLayoutView<Item: FlexibleWrapGridItemProtocol>: View {
     //MARK: - Properties
     
     let items: [Item]

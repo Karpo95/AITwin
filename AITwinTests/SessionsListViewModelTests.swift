@@ -19,7 +19,7 @@ final class SessionsListViewModelTests: XCTestCase {
     /// Waits until the `loading` property of the viewModel changes from true to false.
     private func awaitFetchCompletion(of viewModel: SessionsListViewModel, timeout: TimeInterval = 1.0) {
         let expectation = XCTestExpectation(description: "Wait until loading becomes false")
-        viewModel.$loading
+        viewModel.$isLoading
             // Skip the initial emission
             .dropFirst()
             .sink { loading in
@@ -44,7 +44,7 @@ final class SessionsListViewModelTests: XCTestCase {
         let mock = MockNetworkService()
         mock.sessionsBehavior = behavior
         mock.sessionsResult = sessions
-        let vm = SessionsListViewModel(networService: mock)
+        let vm = SessionsListViewModel(networkService: mock)
         awaitFetchCompletion(of: vm)
         return vm
     }
@@ -58,7 +58,7 @@ final class SessionsListViewModelTests: XCTestCase {
 
         // Then
         XCTAssertFalse(
-            viewModel.loading,
+            viewModel.isLoading,
             "loading should be false after successful fetch"
         )
         XCTAssertEqual(
@@ -87,7 +87,7 @@ final class SessionsListViewModelTests: XCTestCase {
 
         // Then
         XCTAssertFalse(
-            viewModel.loading,
+            viewModel.isLoading,
             "loading should be false after fetchData() finishes with an error"
         )
         XCTAssertTrue(
@@ -129,7 +129,7 @@ final class SessionsListViewModelTests: XCTestCase {
         mockService.sessionsBehavior = .success
         mockService.sessionsResult = initial
 
-        let viewModel = SessionsListViewModel(networService: mockService)
+        let viewModel = SessionsListViewModel(networkService: mockService)
         awaitFetchCompletion(of: viewModel)
 
         XCTAssertEqual(
@@ -151,7 +151,7 @@ final class SessionsListViewModelTests: XCTestCase {
         // When
         viewModel.refreshAction()
         XCTAssertTrue(
-            viewModel.loading,
+            viewModel.isLoading,
             "loading should become true immediately after calling refreshAction()"
         )
         awaitFetchCompletion(of: viewModel)
@@ -210,7 +210,7 @@ final class SessionsListViewModelTests: XCTestCase {
         mockService.sessionsBehavior = .success
         mockService.sessionsResult = initialSessions
 
-        let viewModel = SessionsListViewModel(networService: mockService)
+        let viewModel = SessionsListViewModel(networkService: mockService)
         awaitFetchCompletion(of: viewModel)
 
         XCTAssertEqual(

@@ -16,7 +16,7 @@
 		29A8F2EF2DEB221E007BBD36 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2EE2DEB221E007BBD36 /* NetworkError.swift */; };
 		29A8F2F12DEB2232007BBD36 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2F02DEB2232007BBD36 /* HTTPMethod.swift */; };
 		29A8F2F32DEB2245007BBD36 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2F22DEB2245007BBD36 /* NetworkService.swift */; };
-		29A8F2F62DEB228F007BBD36 /* SessionHTTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2F52DEB228F007BBD36 /* SessionHTTTPBody.swift */; };
+		29A8F2F62DEB228F007BBD36 /* SessionHTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2F52DEB228F007BBD36 /* SessionHTTPBody.swift */; };
 		29A8F2F92DEB22B3007BBD36 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2F82DEB22B3007BBD36 /* Session.swift */; };
 		29A8F2FD2DEB2308007BBD36 /* FileStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2FC2DEB2308007BBD36 /* FileStorageService.swift */; };
 		29A8F2FF2DEB232B007BBD36 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F2FE2DEB232B007BBD36 /* MockURLProtocol.swift */; };
@@ -53,7 +53,7 @@
 		29A8F34F2DEB5EB0007BBD36 /* PlaceholderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F34E2DEB5EB0007BBD36 /* PlaceholderText.swift */; };
 		29A8F3512DEB61CF007BBD36 /* CreateSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */; };
 		29A8F3532DEB6321007BBD36 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3522DEB6321007BBD36 /* AppTextField.swift */; };
-		29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */; };
+		29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayoutView.swift */; };
 		29A8F3592DEB6633007BBD36 /* FlexibleWrapGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */; };
 		29A8F35B2DEB6697007BBD36 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35A2DEB6697007BBD36 /* String+Extension.swift */; };
 		29A8F3602DEB6E1D007BBD36 /* FlexibleWrapGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */; };
@@ -93,7 +93,7 @@
 		29A8F2EE2DEB221E007BBD36 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		29A8F2F02DEB2232007BBD36 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		29A8F2F22DEB2245007BBD36 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		29A8F2F52DEB228F007BBD36 /* SessionHTTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHTTTPBody.swift; sourceTree = "<group>"; };
+		29A8F2F52DEB228F007BBD36 /* SessionHTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHTTPBody.swift; sourceTree = "<group>"; };
 		29A8F2F82DEB22B3007BBD36 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		29A8F2FC2DEB2308007BBD36 /* FileStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageService.swift; sourceTree = "<group>"; };
 		29A8F2FE2DEB232B007BBD36 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		29A8F34E2DEB5EB0007BBD36 /* PlaceholderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderText.swift; sourceTree = "<group>"; };
 		29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewModel.swift; sourceTree = "<group>"; };
 		29A8F3522DEB6321007BBD36 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
-		29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridFlowLayout.swift; sourceTree = "<group>"; };
+		29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridFlowLayoutView.swift; sourceTree = "<group>"; };
 		29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridItemView.swift; sourceTree = "<group>"; };
 		29A8F35A2DEB6697007BBD36 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleWrapGridView.swift; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 		29A8F2F42DEB227E007BBD36 /* HTTPBody */ = {
 			isa = PBXGroup;
 			children = (
-				29A8F2F52DEB228F007BBD36 /* SessionHTTTPBody.swift */,
+				29A8F2F52DEB228F007BBD36 /* SessionHTTPBody.swift */,
 				29A8F3062DEB28B7007BBD36 /* MessageHTTPBody.swift */,
 			);
 			path = HTTPBody;
@@ -400,7 +400,6 @@
 		29A8F3332DEB44C4007BBD36 /* CreateSession */ = {
 			isa = PBXGroup;
 			children = (
-				29A8F3542DEB65DE007BBD36 /* Components */,
 				29A8F3342DEB44E0007BBD36 /* CreateSessionView.swift */,
 				29A8F3502DEB61CF007BBD36 /* CreateSessionViewModel.swift */,
 			);
@@ -445,17 +444,10 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		29A8F3542DEB65DE007BBD36 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		29A8F35E2DEB6E12007BBD36 /* FlexibleWrapGridView */ = {
 			isa = PBXGroup;
 			children = (
-				29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift */,
+				29A8F3552DEB65F3007BBD36 /* FlexibleWrapGridFlowLayoutView.swift */,
 				29A8F3582DEB6633007BBD36 /* FlexibleWrapGridItemView.swift */,
 				29A8F35F2DEB6E1D007BBD36 /* FlexibleWrapGridView.swift */,
 			);
@@ -653,7 +645,7 @@
 				29A8F34F2DEB5EB0007BBD36 /* PlaceholderText.swift in Sources */,
 				29A8F3932DEC65B0007BBD36 /* AIService.swift in Sources */,
 				29A8F3452DEB4D70007BBD36 /* LocalizedAlertError.swift in Sources */,
-				29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayout.swift in Sources */,
+				29A8F3562DEB65F3007BBD36 /* FlexibleWrapGridFlowLayoutView.swift in Sources */,
 				29A8F34B2DEB506D007BBD36 /* SessionItemView.swift in Sources */,
 				29A8F3152DEB364C007BBD36 /* Font+Extension.swift in Sources */,
 				29A8F3072DEB28B7007BBD36 /* MessageHTTPBody.swift in Sources */,
@@ -669,7 +661,7 @@
 				29A8F3232DEB4202007BBD36 /* EmptyClosure.swift in Sources */,
 				29A8F2FD2DEB2308007BBD36 /* FileStorageService.swift in Sources */,
 				29A8F2F12DEB2232007BBD36 /* HTTPMethod.swift in Sources */,
-				29A8F2F62DEB228F007BBD36 /* SessionHTTTPBody.swift in Sources */,
+				29A8F2F62DEB228F007BBD36 /* SessionHTTPBody.swift in Sources */,
 				29A8F32B2DEB444C007BBD36 /* BaseCoordinatorView.swift in Sources */,
 				29A8F3512DEB61CF007BBD36 /* CreateSessionViewModel.swift in Sources */,
 				29A8F3032DEB2370007BBD36 /* StorageWrapper.swift in Sources */,

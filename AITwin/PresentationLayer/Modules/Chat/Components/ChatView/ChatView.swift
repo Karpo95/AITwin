@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ChatView: View {
     // MARK: - Properties
+    
     let messages: [Message]
     
     // MARK: - Body
+    
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
@@ -46,7 +48,7 @@ struct ChatView: View {
     //MARK: - Subviews
     
     @ViewBuilder private var placeholder: some View {
-        if messages.count == 0 {
+        if messages.isEmpty {
             PlaceholderText(text: TextConstant.chatPlaceholder)
         }
     }
